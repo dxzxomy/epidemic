@@ -1,0 +1,83 @@
+{% load static %}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<title>XXX集团</title>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/reset.css' %}"/>
+<script type="text/javascript" src="{% static 'assets/js/jquery-1.8.3.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/plugins/FlexSlider/flexslider.css' %}">
+<script type="text/javascript" src="{% static 'assets/plugins/FlexSlider/jquery.flexslider.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/thems.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/css/responsive.css' %}">
+<script language="javascript">
+$(window).load(function() {
+  $('.flexslider').flexslider({
+	animation: "slide"
+  });
+});
+</script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+    <div class="head clearfix">
+        <div class="head_r">
+            <a href="">登录</a> | <a href="">注册</a>
+        </div>
+    </div>
+</div>
+<div class="banner">
+	<div class="slider">
+        <div class="flexslider">
+          <ul class="slides" style="height: 357px;">
+            <li><a href=""><img style="height: 357px;" src="{% static 'images/header1.png' %}" alt="" /></a></li>
+            <li><a href=""><img style="height: 357px;" src="{% static 'images/header2.png' %}" alt="" /></a></li>
+            <li><a href=""><img style="height: 357px;" src="{% static 'images/header3.png' %}" alt="" /></a></li>
+
+          </ul>
+        </div>
+    </div>
+</div>
+<div class="nav_bg">
+	<div class="nav_m">
+        <div class="n_icon">&nbsp;</div>
+        <ul class="nav clearfix">
+            <li class="now"><a href="{% url 'news:index' %}">首页</a></li>
+            <li><a href="{% url 'news:about' %}">关于病毒</a></li>
+            <li><a href="product.html">实时检测</a></li>
+           <!-- <li><a href="pro.html">经典案例</a></li>-->
+            <li><a href="news.html">新闻资讯</a></li>
+            <li><a href="down.html">视频资源</a></li>
+            <li><a href="contact.html">热门评论</a></li>
+        </ul>
+    </div>
+</div>
+
+
+{% block content %}{% endblock %}
+
+<div class="space_hx">&nbsp;</div>
+<footer class="footer_wrapper"> 
+			<section class="lianxi">
+				<div class="container">
+					<div class="b-nav ">
+					<a href="index.html">首页</a>
+            <a href="about.html">关于我们</a>
+            <a href="product.html">产品中心</a>
+           <!-- <a href="pro.html">经典案例</a>-->
+            <a href="news.html">新闻资讯</a>
+            <a href="down.html">资源下载</a>
+            <a href="contact.html">联系我们</a>
+					</div>
+					<p class="copy">Copyright © 2017-2027  &nbsp;&nbsp; XXX集团</p>
+					<p class="copy">苏ICP备XXX号-9&nbsp;&nbsp;&nbsp;<a href="http://www.kindjob.cn/" target="_blank" style="    color: rgb(139, 147, 157);">技术支持</a> | <a href="http://www.kindjob.cn/" target="_blank" style="color: rgb(139, 147, 157);">宽敬科技</a></p>
+				</div>
+			</section>
+</footer>
+</body>
+</html>
